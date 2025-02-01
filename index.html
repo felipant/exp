@@ -93,12 +93,12 @@
                 <label for="categoria_principal">Categoria principal:</label>
                 <select id="categoria_principal" name="categoria_principal">
                     <option value="">Selecione a categoria</option>
-                    <option value="supermercado">Supermercado</option>
-                    <option value="carro">Carro</option>
-                    <option value="casa">Casa</option>
-                    <option value="assinaturas">Assinaturas</option>
-                    <option value="variedades">Variedades</option>
-                    <option value="farmacia">Farmácia</option>
+                    <option value="Supermercado">Supermercado</option>
+                    <option value="Carro">Carro</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Assinaturas">Assinaturas</option>
+                    <option value="Variedades">Variedades</option>
+                    <option value="Saúde">Saúde</option>
                 </select>
             </div>
     
@@ -144,57 +144,61 @@
         <script>
             // Define subcategories for each categorie
             const subcategoria_dados = {
-                supermercado: [
-                    { value: 'quitandas', label: 'Quitandas' },
-                    { value: 'carnes', label: 'Carnes' },
-                    { value: 'frutas', label: 'Frutas/Verduras' },
-                    { value: 'ovos', label: 'Ovos' },
-                    { value: 'ultraprocessados', label: 'Ultraprocessados' },
-                    { value: 'alcool', label: 'Bebidas alcoólicas' },
-                    { value: 'café', label: 'Café' },
-                    { value: 'agua', label: 'Água' },
-                    { value: 'outros', label: 'Outros' },
+                Supermercado: [
+                    { value: 'Quitandas', label: 'Quitandas' },
+                    { value: 'Carnes', label: 'Carnes' },
+                    { value: 'Frutas', label: 'Frutas/Verduras' },
+                    { value: 'Ovos', label: 'Ovos' },
+                    { value: 'Ultraprocessados', label: 'Ultraprocessados' },
+                    { value: 'Álcool', label: 'Bebidas alcoólicas' },
+                    { value: 'Café', label: 'Café' },
+                    { value: 'Limpeza', label: 'Limpeza' },
+                    { value: 'Água', label: 'Água' },
+                    { value: 'Outros', label: 'Outros' },
 
                 ],
-                carro: [
-                    { value: 'gasolina', label: 'Gasolina' },
-                    { value: 'manutencao', label: 'Manutenção' },
-                    { value: 'impostos', label: 'Impostos' },
-                    { value: 'seguro', label: 'Seguro' },
-                    { value: 'outros', label: 'Outros' },
+                Carro: [
+                    { value: 'Gasolina', label: 'Gasolina' },
+                    { value: 'Manutencao', label: 'Manutenção' },
+                    { value: 'Impostos', label: 'Impostos' },
+                    { value: 'Seguro', label: 'Seguro' },
+                    { value: 'Outros', label: 'Outros' },
                 ],
-                casa: [
-                    { value: 'cemig', label: 'Cemig' },
-                    { value: 'copasa', label: 'Copasa' },
-                    { value: 'condomínio', label: 'Condomínio' },
-                    { value: 'internet', label: 'Internet' },
-                    { value: 'aluguel', label: 'Aluguel' },
-                    { value: 'iptu', label: 'IPTU' },
-                    { value: 'clube', label: 'Clube' },
-                    { value: 'outros', label: 'Outros' },
+                Casa: [
+                    { value: 'Cemig', label: 'Cemig' },
+                    { value: 'Copasa', label: 'Copasa' },
+                    { value: 'Condomínio', label: 'Condomínio' },
+                    { value: 'Internet', label: 'Internet' },
+                    { value: 'Aluguel', label: 'Aluguel' },
+                    { value: 'IPTU', label: 'IPTU' },
+                    { value: 'Clube', label: 'Clube' },
+                    { value: 'Outros', label: 'Outros' },
                 ],
-                variedades: [
-                    { value: 'roupas', label: 'Netflix' },
-                    { value: 'brinquedos', label: 'Amazon' },
-                    { value: 'itens_casa', label: 'Microsoft' },
-                    { value: 'presentes', label: 'Google' },
-                    { value: 'restaurantes', label: 'Vivo' },
-                    { value: 'sorvete   ', label: 'Max' },
-                    { value: 'outros', label: 'Outros' },
+                Variedades: [
+                    { value: 'Roupas', label: 'Roupas' },
+                    { value: 'Brinquedos', label: 'Brinquedos' },
+                    { value: 'Utensílios', label: 'Utensílios' },
+                    { value: 'Presentes', label: 'Presentes' },
+                    { value: 'Restaurantes', label: 'Restaurantes' },
+                    { value: 'Cabelo', label: 'Cabelo' },
+                    { value: 'UFSJ', label: 'UFSJ' },
+                    { value: 'Outros', label: 'Outros' },
                 ],
-                assinaturas: [
-                    { value: 'netflix', label: 'Netflix' },
-                    { value: 'amazon', label: 'Amazon' },
-                    { value: 'microsoft', label: 'Microsoft' },
-                    { value: 'google', label: 'Google' },
-                    { value: 'vivo', label: 'Vivo' },
-                    { value: 'max', label: 'Max' },
-                    { value: 'outros', label: 'Outros' },
+                Assinaturas: [
+                    { value: 'Netflix', label: 'Netflix' },
+                    { value: 'Amazon', label: 'Amazon' },
+                    { value: 'Microsoft', label: 'Microsoft' },
+                    { value: 'Google', label: 'Google' },
+                    { value: 'Vivo', label: 'Vivo' },
+                    { value: 'Max', label: 'Max' },
+                    { value: 'Outros', label: 'Outros' },
                 ],
-                farmacia: [
-                    { value: 'remedios', label: 'Remédios' },
-                    { value: 'suplementos', label: 'Suplementos' },
-                    { value: 'outros', label: 'Outros' },
+                Saúde: [
+                    { value: 'Remédios', label: 'Remédios' },
+                    { value: 'Suplementos', label: 'Suplementos' },
+                    { value: 'Unimed', label: 'Unimed' },
+                    { value: 'Consultas', label: 'Consultas' },
+                    { value: 'Outros', label: 'Outros' },
                 ],
 
             };
